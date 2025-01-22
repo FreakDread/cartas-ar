@@ -1,0 +1,5 @@
+<html>
+<body>
+    <model-viewer src="modelo.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls></model-viewer>
+</body>
+</html>
