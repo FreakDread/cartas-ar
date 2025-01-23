@@ -5,6 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo AR</title>
     <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <style>
+        /* Hace que el modelo ocupe toda la pantalla */
+        body {
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+
+        model-viewer {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Botón de AR personalizado */
+        .ar-button {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #00ff00;
+            color: black;
+            padding: 15px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
     <model-viewer 
@@ -13,8 +45,8 @@
         ar-modes="scene-viewer webxr quick-look" 
         camera-controls 
         auto-rotate>
-        <button slot="ar-button" style="background-color: #000; color: #fff; padding: 10px; font-size: 16px; border: none;">
-            Ver en AR
+        <button slot="ar-button" class="ar-button">
+            📱 Ver en AR
         </button>
     </model-viewer>
 </body>
